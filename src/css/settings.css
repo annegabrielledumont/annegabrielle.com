@@ -79,7 +79,7 @@ http://francoisromain.github.io/postcss-structure
   --gutter: var(--unit);
 
   /* padding of the main container in rem */
-  --container-padding: var(--unit);
+  --container-padding: var(--unit-xxl);
 
   /* transition */
   --transition: opacity 0.5s, background-color 0.5s, border 0.5s,

@@ -5,7 +5,7 @@ http://mystrd.at/modern-clean-css-sticky-footer/
 */
 
 :root {
-  --footer-height: calc(var(--unit) * 12);
+  --footer-height: calc(var(--unit) * 6);
 }
 
 html {
@@ -32,7 +32,7 @@ body {
   color: var(--color-bg);
 }
 
-@media (--viewport-desktop) {
+@media (--viewport-tablet) {
   .footer {
     height: var(--footer-height);
   }

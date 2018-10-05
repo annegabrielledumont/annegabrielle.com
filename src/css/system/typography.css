@@ -38,7 +38,7 @@ h1,
 
 h2,
 .h2 {
-  typescale: 2 1;
+  typescale: 4 1;
 }
 
 h3,
@@ -67,11 +67,11 @@ h5 {
   margin-bottom: var(--unit-xs);
 }
 
-h1 {
+h1,
+h2 {
   font-weight: 200;
 }
 
-h2,
 h3,
 h4,
 h5,

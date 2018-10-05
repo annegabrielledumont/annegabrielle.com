@@ -72,6 +72,7 @@
     "prettier": "^1.14.3",
     "style-loader": "^0.23.0",
     "stylelint": "^9.6.0",
+    "stylelint-config-prettier": "^4.0.0",
     "stylelint-config-standard": "^18.2.0",
     "uglifyjs-webpack-plugin": "^2.0.1",
     "velocity-animate": "^1.5.2",
@@ -79,15 +80,60 @@
     "webpack": "^4.20.2",
     "webpack-cli": "^3.1.2"
   },
-  "browserslist": {
-    "production": [
-      "chrome >= 55",
-      "firefox >= 52",
-      "ie >= 11",
-      "iOS >= 9"
+  "postcss": {
+    "plugins": {
+      "postcss-normalize": {},
+      "postcss-import": {},
+      "postcss-typescale": {},
+      "postcss-custom-properties": {},
+      "postcss-calc": {},
+      "postcss-image-set-polyfill": {},
+      "postcss-nesting": {},
+      "postcss-custom-media": {},
+      "postcss-media-minmax": {},
+      "postcss-custom-selectors": {},
+      "postcss-color-mod-function": {},
+      "postcss-font-family-system-ui": {},
+      "postcss-font-variant": {},
+      "pleeease-filters": {},
+      "pixrem": {
+        "html": false
+      },
+      "postcss-selector-matches": {},
+      "postcss-selector-not": {},
+      "postcss-grid-system": {},
+      "postcss-grid-fluid": {},
+      "postcss-button": {},
+      "postcss-inline-svg": {}
+    }
+  },
+  "browserslist": [
+    "defaults"
+  ],
+  "eslintConfig": {
+    "extends": [
+      "prettier-standard"
+    ]
+  },
+  "stylelint": {
+    "extends": [
+      "stylelint-config-standard",
+      "stylelint-config-prettier"
     ],
-    "development": [
-      "last 1 chrome versions"
+    "rules": {
+      "property-no-unknown": [
+        true,
+        {
+          "ignoreProperties": [
+            "typescale",
+            "gf",
+            "/button-/"
+          ]
+        }
+      ]
+    },
+    "ignoreFiles": [
+      "./dist/**/*"
     ]
   }
 }
