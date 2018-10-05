@@ -1,0 +1,93 @@
+{
+  "name": "anne-gabrielle-dumont",
+  "version": "0.1.0",
+  "license": "SEE LICENSE IN license.md",
+  "repository": "",
+  "description": "",
+  "author": {
+    "name": "François Romain",
+    "email": "francoisromain@gmail.com",
+    "url": "https://francoisromain.com"
+  },
+  "scripts": {
+    "webpack": "NODE_ENV=development webpack --watch --progress --colors --display-error-details",
+    "dev-css": "postcss src/css/styles.css -o dist/css/styles.css",
+    "clean": "rm -rf dist && mkdir dist/",
+    "dist": "npm run clean && NODE_ENV=production webpack --progress --hide-modules",
+    "svgo": "svgo -f --pretty ./src -r",
+    "dev": "npm run clean && npm run webpack & livereload"
+  },
+  "dependencies": {
+    "picturefill": "^3.0.2",
+    "intersection-observer": "^0.5.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/register": "^7.0.0",
+    "@mapbox/stylelint-processor-arbitrary-tags": "^0.2.0",
+    "autoprefixer": "^9.1.5",
+    "babel-loader": "^8.0.4",
+    "css-loader": "^1.0.0",
+    "cssnano": "^4.1.4",
+    "eslint": "^5.6.1",
+    "eslint-config-prettier": "^3.1.0",
+    "eslint-config-prettier-standard": "^2.0.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "events": "^3.0.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "html-loader": "^0.5.5",
+    "imagesloaded": "latest",
+    "livereload": "^0.7.0",
+    "normalize.css": "latest",
+    "object-fit-images": "^3.2.4",
+    "pixrem": "^4.0.1",
+    "pleeease-filters": "^4.0.0",
+    "postcss-button": "^0.3.16",
+    "postcss-calc": "^6.0.2",
+    "postcss-color-mod-function": "^3.0.3",
+    "postcss-custom-media": "^7.0.4",
+    "postcss-custom-properties": "^8.0.8",
+    "postcss-custom-selectors": "^5.1.2",
+    "postcss-font-family-system-ui": "^4.1.0",
+    "postcss-font-variant": "^4.0.0",
+    "postcss-grid-fluid": "^0.3.3",
+    "postcss-grid-system": "^0.4.15",
+    "postcss-image-set-polyfill": "^0.4.4",
+    "postcss-import": "^12.0.0",
+    "postcss-inline-svg": "^3.1.1",
+    "postcss-loader": "^3.0.0",
+    "postcss-media-minmax": "^4.0.0",
+    "postcss-nesting": "^7.0.0",
+    "postcss-normalize": "^7.0.1",
+    "postcss-selector-matches": "^4.0.0",
+    "postcss-selector-not": "^4.0.0",
+    "postcss-typescale": "^0.2.1",
+    "postcss-url": "^8.0.0",
+    "prettier": "^1.14.3",
+    "style-loader": "^0.23.0",
+    "stylelint": "^9.6.0",
+    "stylelint-config-standard": "^18.2.0",
+    "uglifyjs-webpack-plugin": "^2.0.1",
+    "velocity-animate": "^1.5.2",
+    "webfontloader": "^1.6.28",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2"
+  },
+  "browserslist": {
+    "production": [
+      "chrome >= 55",
+      "firefox >= 52",
+      "ie >= 11",
+      "iOS >= 9"
+    ],
+    "development": [
+      "last 1 chrome versions"
+    ]
+  }
+}

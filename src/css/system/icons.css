@@ -1,0 +1,394 @@
+.icon {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-size: cover;
+}
+
+.icon-8 {
+  width: calc(var(--base-font-size) / 2);
+  height: calc(var(--base-font-size) / 2);
+  display: block;
+}
+
+.icon-24 {
+  width: var(--unit);
+  height: var(--unit);
+  display: block;
+  background-repeat: no-repeat;
+}
+
+.icon-48 {
+  width: var(--unit-xl);
+  height: var(--unit-xl);
+  display: block;
+  background-repeat: no-repeat;
+}
+
+.icon-128 {
+  width: calc(var(--unit) * 5);
+  height: calc(var(--unit) * 5);
+  display: inline-block;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+}
+
+.icon-24-close {
+  background-image: svg-load(
+    './icons/24-close.svg',
+    fill=none,
+    stroke= '#666',
+    stroke-linecap=round,
+    stroke-linejoin=round,
+    stroke-width=1.25px
+  );
+}
+
+.btn-alt:hover .icon-24-close {
+  background-image: svg-load(
+    './icons/24-close.svg',
+    fill=none,
+    stroke= 'white',
+    stroke-linecap=round,
+    stroke-linejoin=round,
+    stroke-width=1.25px
+  );
+}
+
+.icon-24-plus {
+  background-image: svg-load(
+    './icons/24-plus.svg',
+    fill=none,
+    stroke= '#666',
+    stroke-linecap=round,
+    stroke-linejoin=round,
+    stroke-width=1.25px
+  );
+}
+
+.btn-alt .icon-24-plus,
+.btn-alt:hover .icon-24-plus,
+.btn-border:hover .icon-24-plus {
+  background-image: svg-load(
+    './icons/24-plus.svg',
+    fill=none,
+    stroke= 'white',
+    stroke-linecap=round,
+    stroke-linejoin=round,
+    stroke-width=1.25px
+  );
+}
+
+.icon-24-minus {
+  background-image: svg-load(
+    './icons/24-minus.svg',
+    fill=none,
+    stroke= '#666',
+    stroke-linecap=round,
+    stroke-linejoin=round,
+    stroke-width=1.25px
+  );
+}
+
+.btn-alt:hover .icon-24-minus,
+.btn-border:hover .icon-24-minus {
+  background-image: svg-load(
+    './icons/24-minus.svg',
+    fill=none,
+    stroke= 'white',
+    stroke-linecap=round,
+    stroke-linejoin=round,
+    stroke-width=1.25px
+  );
+}
+
+.btn-menubar .icon-24-dot {
+  background-image: svg-load(
+    './icons/24-dot.svg',
+    fill=none,
+    stroke= 'white',
+    stroke-linecap=round,
+    stroke-linejoin=round,
+    stroke-width=1px
+  );
+}
+
+.icon-24-chevron-b {
+  background-image: svg-load(
+    './icons/24-chevron-b.svg',
+    fill=none,
+    stroke= '#666',
+    stroke-linecap=round,
+    stroke-linejoin=round,
+    stroke-width=1.25px
+  );
+}
+
+.btn-border:hover .icon-24-chevron-b,
+.btn:hover .icon-24-chevron-b,
+.btn-alt:hover .icon-24-chevron-b {
+  background-image: svg-load(
+    './icons/24-chevron-b.svg',
+    fill=none,
+    stroke= 'white',
+    stroke-linecap=round,
+    stroke-linejoin=round,
+    stroke-width=1.25px
+  );
+}
+
+.icon-24-chevron-t {
+  background-image: svg-load(
+    './icons/24-chevron-t.svg',
+    fill=none,
+    stroke= '#666',
+    stroke-linecap=round,
+    stroke-linejoin=round,
+    stroke-width=1.25px
+  );
+}
+
+.btn-border:hover .icon-24-chevron-t,
+.btn:hover .icon-24-chevron-t,
+.btn-alt:hover .icon-24-chevron-t {
+  background-image: svg-load(
+    './icons/24-chevron-t.svg',
+    fill=none,
+    stroke= 'white',
+    stroke-linecap=round,
+    stroke-linejoin=round,
+    stroke-width=1.25px
+  );
+}
+
+.icon-24-download {
+  background-image: svg-load(
+    './icons/24-download.svg',
+    fill=none,
+    stroke= '#666',
+    stroke-linecap=round,
+    stroke-linejoin=round,
+    stroke-width=1.25px
+  );
+}
+
+.icon-24-view {
+  background-image: svg-load(
+    './icons/24-view.svg',
+    fill=none,
+    stroke= '#666',
+    stroke-linecap=round,
+    stroke-linejoin=round,
+    stroke-width=1.25px
+  );
+}
+
+.icon-24-link {
+  background-image: svg-load(
+    './icons/24-link.svg',
+    fill=none,
+    stroke= '#666',
+    stroke-linecap=round,
+    stroke-linejoin=round,
+    stroke-width=1.25px
+  );
+}
+
+.btn-alt:hover .icon-24-link {
+  background-image: svg-load(
+    './icons/24-link.svg',
+    fill=none,
+    stroke= 'white',
+    stroke-linecap=round,
+    stroke-linejoin=round,
+    stroke-width=1.25px
+  );
+}
+
+.icon-24-login {
+  background-image: svg-load(
+    './icons/24-login.svg',
+    fill=none,
+    stroke= '#666',
+    stroke-linecap=round,
+    stroke-linejoin=round,
+    stroke-width=1.25px
+  );
+}
+
+.btn-alt:hover .icon-24-login {
+  background-image: svg-load(
+    './icons/24-login.svg',
+    fill=none,
+    stroke= 'white',
+    stroke-linecap=round,
+    stroke-linejoin=round,
+    stroke-width=1.25px
+  );
+}
+
+.icon-24-user {
+  background-image: svg-load(
+    './icons/24-user.svg',
+    fill=none,
+    stroke= '#666',
+    stroke-linecap=round,
+    stroke-linejoin=round,
+    stroke-width=1.25px
+  );
+}
+
+.btn-alt:hover .icon-24-user {
+  background-image: svg-load(
+    './icons/24-user.svg',
+    fill=none,
+    stroke= 'white',
+    stroke-linecap=round,
+    stroke-linejoin=round,
+    stroke-width=1.25px
+  );
+}
+
+.icon-24-edit {
+  background-image: svg-load(
+    './icons/24-pencil.svg',
+    fill=none,
+    stroke= '#666',
+    stroke-linecap=round,
+    stroke-linejoin=round,
+    stroke-width=1.25px
+  );
+}
+
+.btn-alt:hover .icon-24-edit {
+  background-image: svg-load(
+    './icons/24-pencil.svg',
+    fill=none,
+    stroke= 'white',
+    stroke-linecap=round,
+    stroke-linejoin=round,
+    stroke-width=1.25px
+  );
+}
+
+.icon-24-dot.blink {
+  animation: blinker 0.2s ease infinite;
+}
+
+@keyframes blinker {
+  50% {
+    background-image: svg-load('./icons/24-dot.svg', fill= 'white');
+  }
+}
+
+.icon-24-globe {
+  background-image: svg-load(
+    './icons/globe-3.svg',
+    fill=none,
+    stroke= '#666',
+    stroke-linecap=round,
+    stroke-linejoin=round,
+    stroke-width=1.25px
+  );
+}
+
+.active .icon-24-globe,
+.btn-border:hover .icon-24-globe {
+  background-image: svg-load(
+    './icons/globe-3.svg',
+    fill=none,
+    stroke= 'white',
+    stroke-linecap=round,
+    stroke-linejoin=round,
+    stroke-width=1.25px
+  );
+}
+
+.icon-24-list {
+  background-image: svg-load(
+    './icons/folder.svg',
+    fill=none,
+    stroke= '#666',
+    stroke-linecap=round,
+    stroke-linejoin=round,
+    stroke-width=1.25px
+  );
+}
+
+.active .icon-24-list,
+.btn-border:hover .icon-24-list {
+  background-image: svg-load(
+    './icons/folder.svg',
+    fill=none,
+    stroke= 'white',
+    stroke-linecap=round,
+    stroke-linejoin=round,
+    stroke-width=1.25px
+  );
+}
+
+.icon-128-map {
+  background-image: svg-load(
+    './icons/map-pin-2.svg',
+    fill=none,
+    stroke= '#76b6bd',
+    stroke-linecap=round,
+    stroke-linejoin=round,
+    stroke-width=1px
+  );
+}
+
+.icon-128-dashboard {
+  background-image: svg-load(
+    './icons/window-speedtest.svg',
+    fill=none,
+    stroke= '#76b6bd',
+    stroke-linecap=round,
+    stroke-linejoin=round,
+    stroke-width=1px
+  );
+}
+
+.icon-128-api {
+  background-image: svg-load(
+    './icons/cloud-setting.svg',
+    fill=none,
+    stroke= '#76b6bd',
+    stroke-linecap=round,
+    stroke-linejoin=round,
+    stroke-width=1px
+  );
+}
+
+.icon-128-user {
+  background-image: svg-load(
+    './icons/business-check.svg',
+    fill=none,
+    stroke= '#76b6bd',
+    stroke-linecap=round,
+    stroke-linejoin=round,
+    stroke-width=1px
+  );
+}
+
+.icon-128-ngo {
+  background-image: svg-load(
+    './icons/group-global.svg',
+    fill=none,
+    stroke= '#76b6bd',
+    stroke-linecap=round,
+    stroke-linejoin=round,
+    stroke-width=1px
+  );
+}
+
+.icon-128-business {
+  background-image: svg-load(
+    './icons/building-2.svg',
+    fill=none,
+    stroke= '#76b6bd',
+    stroke-linecap=round,
+    stroke-linejoin=round,
+    stroke-width=1px
+  );
+}

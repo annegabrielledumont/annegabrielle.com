@@ -1,0 +1,123 @@
+/*
+    UI elements
+-------------------------------
+*/
+
+.pill {
+  border-radius: var(--unit-infinity);
+}
+
+.pill-left {
+  border-radius: var(--unit-infinity) 0 0 var(--unit-infinity);
+}
+
+.pill-right {
+  border-radius: 0 var(--unit-infinity) var(--unit-infinity) 0;
+}
+
+.rnd {
+  border-radius: var(--unit-xs);
+}
+
+.rnd-t {
+  border-radius: var(--unit-xs) var(--unit-xs) 0 0;
+}
+
+.rnd-t-r {
+  border-radius: 0 var(--unit-xs) 0 0;
+}
+
+.border-b {
+  border-bottom: var(--unit-line) solid var(--color-alt);
+  margin-bottom: calc(var(--unit) - var(--unit-line));
+}
+
+.border-t {
+  border-top: var(--unit-line) solid var(--color-alt);
+}
+
+.border-b-s {
+  border-bottom: var(--unit-line) solid var(--color-alt);
+  margin-bottom: calc(-1 * var(--unit-line));
+}
+
+.border-t-r {
+  border-top: var(--unit-line) solid var(--color-alt);
+  border-right: var(--unit-line) solid var(--color-alt);
+}
+
+.border {
+  box-shadow: inset 0 0 0 var(--unit-line) var(--color-alt);
+}
+
+.border-inverse {
+  box-shadow: inset 0 0 0 var(--unit-line) var(--color-inverse);
+}
+
+.border-bg {
+  box-shadow: inset 0 0 0 var(--unit-line) var(--color-bg);
+
+  /* border: solid var(--unit-xxs) var(--color-bg); */
+}
+
+.tooltip {
+  position: relative;
+}
+
+.tooltip span {
+  position: absolute;
+  color: var(--color-alt);
+  background: var(--color-neutral);
+  text-align: center;
+  border-radius: var(--unit-xs);
+  top: calc(var(--unit-xl) * -1);
+  right: 0;
+  padding: var(--unit-xs);
+  z-index: 999;
+}
+
+.tooltip span::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  right: var(--unit);
+  border-top: var(--unit-xs) solid var(--color-neutral);
+  border-right: var(--unit-xs) solid transparent;
+  border-left: var(--unit-xs) solid transparent;
+}
+
+.shadow {
+  box-shadow: var(--unit-xs) var(--unit-xs) var(--unit)
+    color-mod(var(--color-neutral) alpha(0.25));
+}
+
+.shadow-inset {
+  box-shadow: inset var(--unit-xs) var(--unit-xs) var(--unit)
+    color-mod(var(--color-neutral) alpha(0.25));
+}
+
+.ribbon {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  width: 150px;
+  height: 150px;
+}
+
+.ribbon-bloc {
+  transform: rotate(45deg);
+}
+
+.ribbon span {
+  display: inline-block;
+  width: 100%;
+  color: var(--color-bg);
+  background-color: var(--color-warning);
+  text-align: center;
+}
+
+.fixed-width {
+  width: calc(var(--col-width) * 1 / 4);
+  display: inline-block;
+}
