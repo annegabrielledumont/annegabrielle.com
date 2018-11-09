@@ -39,28 +39,28 @@ http://francoisromain.github.io/postcss-structure
   --unit: 1.5rem;
 
   /* line: 0.0625rem = 1px */
-  --unit-line: calc(var(--unit) / 24);
+  --unit-line: calc(var(--unit)/24);
 
   /* xxs: 0.1875rem = 3px */
-  --unit-xxs: calc(var(--unit) / 8);
+  --unit-xxs: calc(var(--unit)/8);
 
   /* xs: 0.375rem = 6px */
-  --unit-xs: calc(var(--unit) / 4);
+  --unit-xs: calc(var(--unit)/4);
 
   /* s: 0.75rem = 12px */
-  --unit-s: calc(var(--unit) / 2);
+  --unit-s: calc(var(--unit)/2);
 
   /* m: 1.125rem = 18px */
-  --unit-m: calc(var(--unit) * 3 / 4);
+  --unit-m: calc(var(--unit)*3/4);
 
   /* l: 2.25rem = 36 px */
-  --unit-l: calc(var(--unit) * 3 / 2);
+  --unit-l: calc(var(--unit)*3/2);
 
   /* xl: 3rem = 48px */
-  --unit-xl: calc(var(--unit) * 2);
+  --unit-xl: calc(var(--unit)*2);
 
   /* xxl: 3.75rem = 60 px */
-  --unit-xxl: calc(var(--unit) * 2.5);
+  --unit-xxl: calc(var(--unit)*2.5);
 
   /*  */
   --unit-infinity: 9999px;
@@ -324,60 +324,60 @@ pre {
 .h0 {
   font-size: 95.367px;
   font-size: 5.96046rem;
-  font-size: calc(5.96046 * var(--base-font-size));
+  font-size: calc(5.96046*var(--base-font-size));
   line-height: 144px;
   line-height: 9rem;
-  line-height: calc(6 * var(--unit));
+  line-height: calc(6*var(--unit));
 }
 
 h1,
 .h1 {
   font-size: 39.062px;
   font-size: 2.44141rem;
-  font-size: calc(2.44141 * var(--base-font-size));
+  font-size: calc(2.44141*var(--base-font-size));
   line-height: 36px;
   line-height: 2.25rem;
-  line-height: calc(1.5 * var(--unit));
+  line-height: calc(1.5*var(--unit));
 }
 
 h2,
 .h2 {
   font-size: 39.062px;
   font-size: 2.44141rem;
-  font-size: calc(2.44141 * var(--base-font-size));
+  font-size: calc(2.44141*var(--base-font-size));
   line-height: 24px;
   line-height: 1.5rem;
-  line-height: calc(1 * var(--unit));
+  line-height: calc(1*var(--unit));
 }
 
 h3,
 .h3 {
   font-size: 20px;
   font-size: 1.25rem;
-  font-size: calc(1.25 * var(--base-font-size));
+  font-size: calc(1.25*var(--base-font-size));
   line-height: 24px;
   line-height: 1.5rem;
-  line-height: calc(1 * var(--unit));
+  line-height: calc(1*var(--unit));
 }
 
 h4,
 .h4 {
   font-size: 16px;
   font-size: 1rem;
-  font-size: calc(1 * var(--base-font-size));
+  font-size: calc(1*var(--base-font-size));
   line-height: 24px;
   line-height: 1.5rem;
-  line-height: calc(1 * var(--unit));
+  line-height: calc(1*var(--unit));
 }
 
 h5,
 .h5 {
   font-size: 12.8px;
   font-size: 0.8rem;
-  font-size: calc(0.8 * var(--base-font-size));
+  font-size: calc(0.8*var(--base-font-size));
   line-height: 18px;
   line-height: 1.125rem;
-  line-height: calc(0.75 * var(--unit));
+  line-height: calc(0.75*var(--unit));
 }
 
 h6,
@@ -385,10 +385,10 @@ h6,
 small {
   font-size: 12.8px;
   font-size: 0.8rem;
-  font-size: calc(0.8 * var(--base-font-size));
+  font-size: calc(0.8*var(--base-font-size));
   line-height: 18px;
   line-height: 1.125rem;
-  line-height: calc(0.75 * var(--unit));
+  line-height: calc(0.75*var(--unit));
 }
 
 h6,
@@ -418,10 +418,10 @@ h6 {
 blockquote {
   font-size: 17.888px;
   font-size: 1.11803rem;
-  font-size: calc(1.11803 * var(--base-font-size));
+  font-size: calc(1.11803*var(--base-font-size));
   line-height: 24px;
   line-height: 1.5rem;
-  line-height: calc(1 * var(--unit));
+  line-height: calc(1*var(--unit));
   font-style: italic;
   padding: 24px;
   padding: 1.5rem;
@@ -433,10 +433,10 @@ blockquote::before,
 blockquote::after {
   font-size: 31.25px;
   font-size: 1.95313rem;
-  font-size: calc(1.95313 * var(--base-font-size));
+  font-size: calc(1.95313*var(--base-font-size));
   line-height: 0px;
   line-height: 0rem;
-  line-height: calc(0 * var(--unit));
+  line-height: calc(0*var(--unit));
   color: #bcb9af;
   color: var(--color-neutral);
   vertical-align: sub;
@@ -633,7 +633,7 @@ li > ul,
 .list-inline.flex-right {
   margin-right: -6px;
   margin-right: -0.375rem;
-  margin-right: calc(-1 * var(--unit-xs));
+  margin-right: calc(-1*var(--unit-xs));
 }
 
 .list-inline::after {
@@ -686,10 +686,10 @@ th {
   font-weight: 700;
   font-size: 12.8px;
   font-size: 0.8rem;
-  font-size: calc(0.8 * var(--base-font-size));
+  font-size: calc(0.8*var(--base-font-size));
   line-height: 24px;
   line-height: 1.5rem;
-  line-height: calc(1 * var(--unit));
+  line-height: calc(1*var(--unit));
   color: #bcb9af;
   color: var(--color-neutral);
 }
@@ -1207,7 +1207,7 @@ https://github.com/francoisromain/postcss-grid-fluid
 @media (min-width: 42.5em) {
   .container {
     width: 42.5rem;
-    width: calc(2 * var(--col-width) + var(--gutter));
+    width: calc(2*var(--col-width) + var(--gutter));
   }
 
   .tablet-blobs {
@@ -1281,7 +1281,7 @@ https://github.com/francoisromain/postcss-grid-fluid
 @media (min-width: 63em) {
   .container {
     width: 63rem;
-    width: calc(3 * var(--col-width) + var(--gutter));
+    width: calc(3*var(--col-width) + var(--gutter));
   }
 
   .desktop-blobs {
@@ -1343,7 +1343,7 @@ https://github.com/francoisromain/postcss-grid-fluid
 @media (min-width: 83.5em) {
   .container {
     width: 83.5rem;
-    width: calc(4 * var(--col-width) + var(--gutter));
+    width: calc(4*var(--col-width) + var(--gutter));
   }
 
   .large-blobs {
@@ -1922,43 +1922,43 @@ http://cssmojo.com/the-very-latest-clearfix-reloaded/
 .mt--s {
   margin-top: -12px;
   margin-top: -0.75rem;
-  margin-top: calc(var(--unit-s) * -1);
+  margin-top: calc(var(--unit-s)*-1);
 }
 
 .mt--m {
   margin-top: -18px;
   margin-top: -1.125rem;
-  margin-top: calc(var(--unit-m) * -1);
+  margin-top: calc(var(--unit-m)*-1);
 }
 
 .mb--s {
   margin-bottom: -12px;
   margin-bottom: -0.75rem;
-  margin-bottom: calc(var(--unit-s) * -1);
+  margin-bottom: calc(var(--unit-s)*-1);
 }
 
 .mb--xs {
   margin-bottom: -6px;
   margin-bottom: -0.375rem;
-  margin-bottom: calc(var(--unit-xs) * -1);
+  margin-bottom: calc(var(--unit-xs)*-1);
 }
 
 .my--s {
   margin-top: -12px;
   margin-top: -0.75rem;
-  margin-top: calc(var(--unit-s) * -1);
+  margin-top: calc(var(--unit-s)*-1);
   margin-bottom: -12px;
   margin-bottom: -0.75rem;
-  margin-bottom: calc(var(--unit-s) * -1);
+  margin-bottom: calc(var(--unit-s)*-1);
 }
 
 .my--xs {
   margin-top: -6px;
   margin-top: -0.375rem;
-  margin-top: calc(var(--unit-xs) * -1);
+  margin-top: calc(var(--unit-xs)*-1);
   margin-bottom: -6px;
   margin-bottom: -0.375rem;
-  margin-bottom: calc(var(--unit-xs) * -1);
+  margin-bottom: calc(var(--unit-xs)*-1);
 }
 
 /*
@@ -2523,7 +2523,7 @@ http://cssmojo.com/the-very-latest-clearfix-reloaded/
   border-bottom: var(--unit-line) solid var(--color-alt);
   margin-bottom: -1px;
   margin-bottom: -0.0625rem;
-  margin-bottom: calc(-1 * var(--unit-line));
+  margin-bottom: calc(-1*var(--unit-line));
 }
 
 .border-t-r {
@@ -2567,7 +2567,7 @@ http://cssmojo.com/the-very-latest-clearfix-reloaded/
   border-radius: var(--unit-xs);
   top: -48px;
   top: -3rem;
-  top: calc(var(--unit-xl) * -1);
+  top: calc(var(--unit-xl)*-1);
   right: 0;
   padding: 6px;
   padding: 0.375rem;
@@ -2633,7 +2633,7 @@ http://cssmojo.com/the-very-latest-clearfix-reloaded/
 .fixed-width {
   width: 82px;
   width: 5.125rem;
-  width: calc(var(--col-width) * 1 / 4);
+  width: calc(var(--col-width)*1/4);
   display: inline-block;
 }
 
@@ -2664,10 +2664,10 @@ code {
 .icon-8 {
   width: 8px;
   width: 0.5rem;
-  width: calc(var(--base-font-size) / 2);
+  width: calc(var(--base-font-size)/2);
   height: 8px;
   height: 0.5rem;
-  height: calc(var(--base-font-size) / 2);
+  height: calc(var(--base-font-size)/2);
   display: block;
 }
 
@@ -2696,10 +2696,10 @@ code {
 .icon-128 {
   width: 120px;
   width: 7.5rem;
-  width: calc(var(--unit) * 5);
+  width: calc(var(--unit)*5);
   height: 120px;
   height: 7.5rem;
-  height: calc(var(--unit) * 5);
+  height: calc(var(--unit)*5);
   display: inline-block;
   vertical-align: middle;
   background-repeat: no-repeat;
@@ -2945,7 +2945,7 @@ http://qr.ae/ROqymT */
 
 .grid {
   background-size: 20.5rem 0.75rem;
-  background-size: var(--col-width) calc(var(--unit) / 2);
+  background-size: var(--col-width) calc(var(--unit)/2);
   background-position: center top;
   background-image: linear-gradient(
     rgba(0, 0, 0, 0.05) 0.01rem,
@@ -2969,7 +2969,7 @@ http://mystrd.at/modern-clean-css-sticky-footer/
 */
 
 :root {
-  --footer-height: calc(var(--unit) * 6);
+  --footer-height: calc(var(--unit)*6);
 }
 
 html {
@@ -3032,7 +3032,7 @@ body {
 */
 
 :root {
-  --header-height: calc(var(--unit) * 2);
+  --header-height: calc(var(--unit)*2);
 }
 
 .transition-bottom-enter-active,
@@ -3051,7 +3051,7 @@ body {
   opacity: 0;
   margin-bottom: -60px;
   margin-bottom: -3.75rem;
-  margin-bottom: calc(var(--unit-xxl) * -1);
+  margin-bottom: calc(var(--unit-xxl)*-1);
 }
 
 .transition-fade-enter,
@@ -3068,7 +3068,7 @@ body {
 .transition-top-leave-to .pophover {
   margin-top: -60px;
   margin-top: -3.75rem;
-  margin-top: calc(var(--unit-xxl) * -1);
+  margin-top: calc(var(--unit-xxl)*-1);
 }
 
 /* from https://github.com/PrismJS/prism/blob/gh-pages/themes/prism.css */

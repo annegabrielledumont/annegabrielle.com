@@ -3,6 +3,8 @@ const path = require('path')
 const webpack = require('webpack')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const UglifyWebpackPlugin = require('uglifyjs-webpack-plugin')
+const CleanWebpackPlugin = require('clean-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 const npmPackage = require('./package.json')
 
 module.exports = {
@@ -10,8 +12,8 @@ module.exports = {
   context: __dirname,
   entry: './src/js/scripts.js',
   output: {
-    path: path.resolve(__dirname, `dist`),
-    filename: 'scripts.js'
+    path: path.resolve(__dirname),
+    filename: 'dist/scripts.js'
   },
   devtool: dev ? 'cheap-module-eval-source-map' : false,
   module: {
@@ -69,9 +71,13 @@ module.exports = {
           npmName: JSON.stringify(npmPackage.name),
           npmAuthorUrl: JSON.stringify(npmPackage.author.url)
         }),
-        new webpack.ExtendedAPIPlugin()
+        new webpack.ExtendedAPIPlugin(),
+        new HtmlWebpackPlugin({
+          template: 'src/index.html'
+        })
       ]
     : [
+        new CleanWebpackPlugin(['dist']),
         new webpack.DefinePlugin({
           npmVersion: JSON.stringify(npmPackage.version),
           webpackDate: JSON.stringify(new Date().toISOString().slice(0, 10)),
@@ -79,8 +85,11 @@ module.exports = {
           npmAuthorUrl: JSON.stringify(npmPackage.author.url)
         }),
         new webpack.ExtendedAPIPlugin(),
+        new HtmlWebpackPlugin({
+          template: 'src/index.html'
+        }),
         new ExtractTextPlugin({
-          filename: 'styles.css',
+          filename: 'dist/styles.css',
           allChunks: true
         }),
         new UglifyWebpackPlugin()
