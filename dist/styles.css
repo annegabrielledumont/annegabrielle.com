@@ -337,7 +337,7 @@ h2,
 h3,
 .h3 {
   font-size: calc(1.25 * var(--base-font-size));
-  line-height: calc(1 * var(--unit));
+  line-height: calc(1.25 * var(--unit));
 }
 
 h4,
@@ -389,7 +389,7 @@ blockquote {
   padding: 24px;
   padding: 1.5rem;
   padding: var(--unit);
-  quotes: '«\00A0' '\00A0»';
+  quotes: "«\00A0" "\00A0»";
 }
 
 blockquote::before,
@@ -521,7 +521,7 @@ label {
 }
 
 .mono {
-  font-family: 'Lucida Sans Typewriter', monaco, 'Lucida Console', monospace;
+  font-family: "Lucida Sans Typewriter", monaco, "Lucida Console", monospace;
   font-weight: bold;
 }
 
