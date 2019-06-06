@@ -1,65 +1,67 @@
-const dev = process.env.NODE_ENV !== 'production'
-const path = require('path')
-const webpack = require('webpack')
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
-const UglifyWebpackPlugin = require('uglifyjs-webpack-plugin')
-const CleanWebpackPlugin = require('clean-webpack-plugin')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const npmPackage = require('./package.json')
+const dev = process.env.NODE_ENV !== "production";
+const path = require("path");
+const webpack = require("webpack");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const UglifyWebpackPlugin = require("uglifyjs-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const npmPackage = require("./package.json");
 
 module.exports = {
-  mode: dev ? 'development' : 'production',
+  mode: dev ? "development" : "production",
   context: __dirname,
-  entry: './src/js/scripts.js',
+  entry: "./src/js/scripts.js",
   output: {
     path: path.resolve(__dirname),
-    filename: 'dist/scripts.js'
+    filename: "dist/scripts.js"
   },
-  devtool: dev ? 'cheap-module-eval-source-map' : false,
+  devtool: dev ? "cheap-module-eval-source-map" : false,
   module: {
     rules: [
       {
         test: /\.js$/,
-        loader: 'babel-loader',
+        loader: "babel-loader",
         exclude: /node_modules/
       },
       {
         test: /\.(png|jpg|gif|svg)$/,
-        loader: 'url-loader',
+        loader: "url-loader",
         query: {
           limit: 10000,
-          name: '[name].[ext]?[hash]'
+          name: "[name].[ext]?[hash]"
         }
       },
       {
         test: /\.css$/,
         use: dev
           ? [
-              'style-loader',
+              "style-loader",
               {
-                loader: 'css-loader',
+                loader: "css-loader",
                 options: {
                   sourceMap: true,
                   importLoaders: 1
                 }
               },
               {
-                loader: 'postcss-loader',
+                loader: "postcss-loader",
                 options: {
                   sourceMap: true
                 }
               }
             ]
-          : ExtractTextPlugin.extract({
-              fallback: 'style-loader',
-              use: [
-                {
-                  loader: 'css-loader'
-                  // options: { minimize: true },
-                },
-                'postcss-loader'
-              ]
-            })
+          : [
+              {
+                loader: MiniCssExtractPlugin.loader,
+                options: {
+                  // you can specify a publicPath here
+                  // by default it uses publicPath in webpackOptions.output
+                  publicPath: "../",
+                  hmr: process.env.NODE_ENV === "development"
+                }
+              },
+              "css-loader",
+              "postcss-loader"
+            ]
       }
     ]
   },
@@ -73,11 +75,10 @@ module.exports = {
         }),
         new webpack.ExtendedAPIPlugin(),
         new HtmlWebpackPlugin({
-          template: 'src/index.html'
+          template: "src/index.html"
         })
       ]
     : [
-        new CleanWebpackPlugin(['dist']),
         new webpack.DefinePlugin({
           npmVersion: JSON.stringify(npmPackage.version),
           webpackDate: JSON.stringify(new Date().toISOString().slice(0, 10)),
@@ -86,12 +87,12 @@ module.exports = {
         }),
         new webpack.ExtendedAPIPlugin(),
         new HtmlWebpackPlugin({
-          template: 'src/index.html'
+          template: "src/index.html"
         }),
-        new ExtractTextPlugin({
-          filename: 'dist/styles.css',
-          allChunks: true
+        new MiniCssExtractPlugin({
+          filename: "dist/styles.css",
+          chunkFilename: "[id].css"
         }),
         new UglifyWebpackPlugin()
       ]
-}
+};

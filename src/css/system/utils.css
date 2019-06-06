@@ -13,6 +13,10 @@ http://cssmojo.com/the-very-latest-clearfix-reloaded/
   clear: both;
 }
 
+.block {
+  display: block;
+}
+
 .dot {
   display: inline-block;
   width: var(--unit-s);
@@ -60,8 +64,20 @@ http://cssmojo.com/the-very-latest-clearfix-reloaded/
   align-items: flex-start;
 }
 
+.flex-stretch {
+  align-items: stretch;
+}
+
 .flex-direction-column {
   flex-direction: column;
+}
+
+.flex-bottom {
+  margin-top: auto;
+}
+
+.flex-full-x {
+  flex: 1;
 }
 
 .left {

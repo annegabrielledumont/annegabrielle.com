@@ -9,7 +9,6 @@
   line-height: var(--unit);
 }
 
-h1,
 h2,
 h3,
 h4,
@@ -27,18 +26,26 @@ pre {
   margin-bottom: var(--unit);
 }
 
+h1 {
+  margin-bottom: var(--unit-l);
+}
+
+h6 {
+  margin-bottom: var(--unit-xs);
+}
+
 .h0 {
   typescale: 8 6;
 }
 
 h1,
 .h1 {
-  typescale: 4 1.5;
+  typescale: 5 2;
 }
 
 h2,
 .h2 {
-  typescale: 4 1.5;
+  typescale: 3 1.5;
 }
 
 h3,
@@ -62,14 +69,18 @@ small {
   typescale: -1 0.75;
 }
 
-h6,
-h5 {
-  margin-bottom: var(--unit-xs);
+h1 {
+  font-weight: 200;
 }
 
-h1,
 h2 {
-  font-weight: 200;
+  font-weight: 300;
+  padding-bottom: calc(var(--unit) - var(--border-width));
+  border-bottom-width: var(--border-width);
+  border-bottom-style: solid;
+  border-bottom-color: var(--border-color);
+  margin-bottom: var(--unit);
+  color: color-mod(var(--color-highlight) saturation(30%));
 }
 
 h3,
@@ -84,28 +95,14 @@ h6 {
 }
 
 blockquote {
-  typescale: 0.5 1;
+  font-weight: 200;
+  typescale: 3.5 2;
   font-style: italic;
-  padding: var(--unit);
-  quotes: "«\00A0" "\00A0»";
+  padding: var(--unit-xl);
+  color: color-mod(var(--color-highlight) saturation(75%));
 }
 
-blockquote::before,
-blockquote::after {
-  typescale: 3 0;
-  color: var(--color-neutral);
-  vertical-align: sub;
-}
-
-blockquote::before {
-  content: open-quote;
-}
-
-blockquote::after {
-  content: close-quote;
-}
-
-blockquote:last-child {
+blockquote p:last-child {
   margin-bottom: 0;
 }
 
@@ -114,12 +111,13 @@ hr {
   border: 0;
   height: 0;
   border-top-width: var(--border-width);
-  border-top-style: dotted;
+  border-top-style: solid;
   border-top-color: var(--border-color);
   margin-bottom: calc(var(--unit) - var(--border-width));
 }
 
 a {
+  text-decoration: none;
   color: var(--color-inverse);
 
   &:visited {
@@ -129,12 +127,12 @@ a {
   &:hover,
   &:active,
   &:focus {
-    color: var(--color-inverse);
+    color: var(--color-highlight);
   }
 }
 
-a:not(p) {
-  text-decoration: none;
+p a {
+  color: var(--color-highlight);
 }
 
 b,

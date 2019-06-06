@@ -10,21 +10,13 @@ http://francoisromain.github.io/postcss-structure
   --color-transparent: rgba(248, 247, 243, 0);
   --color-inverse: #3d3d35;
   --color-neutral: #bcb9af;
-  --color-alt: #f0efe8;
-  --color-highlight: #b5d1d1;
-  --color-brand: rgb(0, 162, 255);
+  --color-alt: #f0f0e8;
+  --color-highlight: rgb(255, 0, 98);
+  --color-brand: rgb(255, 95, 0);
   --color-error: #e82239;
   --color-warning: #ff891c;
   --color-info: #5798aa;
   --color-success: #6ea040;
-
-  --color-title-domaine-m: #498bd6;
-  --color-title-domaine-h: #856940;
-  --color-title-domaine-s: #8468b1;
-  --color-title-domaine-g: #d16c3e;
-  --color-title-domaine-w: #3ed1ac;
-  --color-title-domaine-r: #c2d13e;
-  --color-title-domaine-c: #3ea3d1;
 
   /* Base units    ------------------------------- */
 
@@ -62,8 +54,8 @@ http://francoisromain.github.io/postcss-structure
   --unit-infinity: 9999px;
 
   /* Lists         ------------------------------- */
-  --list-postfix: ',';
-  --list-prefix: '―';
+  --list-postfix: ",";
+  --list-prefix: "―";
 
   /* Grid          ------------------------------- */
 
@@ -76,7 +68,7 @@ http://francoisromain.github.io/postcss-structure
   --col-width: 20.5rem;
 
   /* width of the gutter in rem */
-  --gutter: var(--unit);
+  --gutter: var(--unit-l);
 
   /* padding of the main container in rem */
   --container-padding: var(--unit-l);
@@ -86,12 +78,12 @@ http://francoisromain.github.io/postcss-structure
     box-shadow 0.5s, fill 0.5s;
 
   /* hr */
-  --border-color: var(--color-neutral);
+  --border-color: var(--color-alt);
   --border-width: var(--unit-line);
 }
 
 /* media queries: x * col-width + gutter */
 @custom-media --viewport-mobile (min-width: 22em);
-@custom-media --viewport-tablet (min-width: 42.5em);
-@custom-media --viewport-desktop (min-width: 63em);
-@custom-media --viewport-large (min-width: 83.5em);
+@custom-media --viewport-tablet (min-width: 47.75em);
+@custom-media --viewport-desktop (min-width: 70.5em);
+@custom-media --viewport-large (min-width: 93.25em);

@@ -28,7 +28,7 @@ tr {
 }
 
 .table-sans tr {
-  border-bottom: var(--unit-line) dotted var(--border-bg);
+  border-bottom: var(--unit-line) dotted var(--border-color);
 }
 
 td,

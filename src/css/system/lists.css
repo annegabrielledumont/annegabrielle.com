@@ -8,7 +8,6 @@ ul,
 ol,
 dd {
   list-style-position: inside;
-
   /* overflow: auto; */
 }
 
@@ -16,7 +15,7 @@ ul > li > ul,
 ul > li > ol,
 ol > li > ul,
 ol > li > ol {
-  margin-left: var(--unit-l);
+  margin-left: var(--unit);
 }
 
 ol {

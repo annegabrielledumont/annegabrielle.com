@@ -7,21 +7,35 @@
   --header-height: calc(var(--unit) * 2);
 }
 
-.img-filter {
-  /* filter: brightness(3) grayscale(100%); */
-  background-color: rgba(39, 62, 84, 0.82);
+.overlay-color {
+  background-color: var(--color-inverse);
+  background-blend-mode: hard-light;
+  opacity: 0.2;
+
+  transition: opacity 0.5s linear;
+  /* background: linear-gradient(
+      to bottom left,
+      rgb(209, 179, 115),
+      var(--color-inverse)
+    ),
+    linear-gradient(to top left, rgb(141, 196, 196), transparent),
+    linear-gradient(to top right, rgb(145, 75, 98), transparent); */
 }
 
-.overlay-color {
-  background-color: rgba(39, 62, 84, 0.82);
-  /* overflow: hidden;
-  height: 100%; */
-  /* background-image: url(/img/anne-gabrielle-com-pilates.jpg); */
-  /* background-blend-mode: multiply; */
-  opacity: 0.2;
-  /* background: linear-gradient(rgba(255, 0, 0, 0.8), transparent),
-    linear-gradient(to top left, rgba(0, 255, 0, 0.5), transparent),
-    linear-gradient(to top right, rgba(0, 0, 255, 0.5), transparent); */
+a:hover .overlay-color {
+  opacity: 0.75;
+}
 
-  /* background-blend-mode: difference; */
+h2 {
+  border-bottom-color: var(--color-bg);
+}
+
+.reveal {
+  opacity: 0;
+  color: var(--color-bg);
+}
+
+a:hover .reveal {
+  transition: opacity 0.5s linear;
+  opacity: 1;
 }

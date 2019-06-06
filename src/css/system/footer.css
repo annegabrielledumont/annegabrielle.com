@@ -17,7 +17,7 @@ body {
   min-height: 100%;
 }
 
-.page {
+.layout {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
@@ -30,6 +30,7 @@ body {
 .footer {
   background-color: var(--color-inverse);
   color: var(--color-bg);
+  margin-top: var(--unit-xl);
 }
 
 @media (--viewport-tablet) {
