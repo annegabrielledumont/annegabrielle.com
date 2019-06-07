@@ -58,8 +58,8 @@ http://francoisromain.github.io/postcss-structure
   --unit-infinity: 9999px;
 
   /* Lists         ------------------------------- */
-  --list-postfix: ',';
-  --list-prefix: '―';
+  --list-postfix: ",";
+  --list-prefix: "―";
 
   /* Grid          ------------------------------- */
 
@@ -413,7 +413,7 @@ hr {
   height: 0;
   border-top-width: calc(1.5rem / 24);
   border-top-width: var(--border-width);
-  border-top-style: dotted;
+  border-top-style: solid;
   border-top-color: #f0f0e8;
   border-top-color: var(--border-color);
   margin-bottom: calc(1.5rem - calc(1.5rem / 24));
@@ -517,7 +517,7 @@ label {
 }
 
 .mono {
-  font-family: 'Lucida Sans Typewriter', monaco, 'Lucida Console', monospace;
+  font-family: "Lucida Sans Typewriter", monaco, "Lucida Console", monospace;
   font-weight: bold;
 }
 
@@ -599,7 +599,7 @@ li > ul,
 }
 
 .list-prefix > li::before {
-    content: '―';
+    content: "―";
     content: var(--list-prefix);
     margin-right: calc(1.5rem / 4);
     margin-right: var(--unit-xs);
@@ -612,7 +612,7 @@ li > ul,
 }
 
 .list-postfix > li::after {
-      content: ',';
+      content: ",";
       content: var(--list-postfix);
     }
 
@@ -1087,6 +1087,17 @@ https://github.com/francoisromain/postcss-grid-fluid
   flex: 0 1 calc(75% - var(--gutter) - 3rem - var(--gutter));
 }
 
+.columns {
+  grid-column-gap: calc(1.5rem * 3 / 2);
+  -webkit-column-gap: calc(1.5rem * 3 / 2);
+     -moz-column-gap: calc(1.5rem * 3 / 2);
+          column-gap: calc(1.5rem * 3 / 2);
+  grid-column-gap: var(--gutter);
+  -webkit-column-gap: var(--gutter);
+     -moz-column-gap: var(--gutter);
+          column-gap: var(--gutter);
+}
+
 @media (min-width: 22em) {
   .mobile-blobs {
     clear: both;
@@ -1241,6 +1252,12 @@ https://github.com/francoisromain/postcss-grid-fluid
     );
   }
 
+  .columns {
+    -webkit-column-count: 2;
+       -moz-column-count: 2;
+            column-count: 2;
+  }
+
   .desktop-blobs {
     clear: both;
     margin-right: calc(-1 * var(--gutter));
@@ -1304,6 +1321,12 @@ https://github.com/francoisromain/postcss-grid-fluid
     width: calc(
       4 * var(--col-width) + 3 * var(--gutter) + 2 * var(--container-padding)
     );
+  }
+
+  .columns {
+    -webkit-column-count: 1;
+       -moz-column-count: 1;
+            column-count: 1;
   }
 
   .large-blobs {
