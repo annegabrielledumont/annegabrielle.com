@@ -189,7 +189,7 @@ https://github.com/francoisromain/postcss-grid-fluid
   }
 
   .columns {
-    column-count: 2;
+    column-count: 1;
   }
 
   .desktop-blobs {
