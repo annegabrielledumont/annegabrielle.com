@@ -39,3 +39,24 @@ a:hover .reveal {
   transition: opacity 0.5s linear;
   opacity: 1;
 }
+
+@media (--viewport-tablet) {
+  h1,
+  .h1 {
+    typescale: 5 2;
+  }
+
+  h2,
+  .h2 {
+    typescale: 3 1.5;
+  }
+
+  h3,
+  .h3 {
+    typescale: 1 1.25;
+  }
+
+  blockquote {
+    padding: var(--unit-xl);
+  }
+}

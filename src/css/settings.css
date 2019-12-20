@@ -54,8 +54,8 @@ http://francoisromain.github.io/postcss-structure
   --unit-infinity: 9999px;
 
   /* Lists         ------------------------------- */
-  --list-postfix: ",";
-  --list-prefix: "―";
+  --list-postfix: ',';
+  --list-prefix: '―';
 
   /* Grid          ------------------------------- */
 

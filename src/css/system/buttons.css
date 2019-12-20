@@ -5,9 +5,9 @@
 
 @button default {
   button-border-width: 0;
-  button-color: var(--color-text) var(--color-bg) var(--color-bg);
-  button-background: var(--color-alt) var(--color-neutral)
-    var(--color-highlight);
+  button-color: var(--color-bg);
+  button-background: var(--color-highlight) var(--color-inverse)
+    var(--color-inverse);
   button-class: active disabled true;
 }
 
@@ -16,11 +16,9 @@
 }
 
 .btn-border {
-  button-border: var(--unit-line) var(--color-alt) var(--color-neutral)
-    var(--color-highlight);
-  button-color: var(--color-highlight) var(--color-bg) var(--color-bg);
-  button-background: var(--color-transparent) var(--color-neutral)
-    var(--color-highlight);
+  button-color: var(--color-bg) var(--color-bg) var(--color-bg);
+  button-background: var(--color-highlight) var(--color-inverse)
+    var(--color-inverse);
   button-class: active disabled;
 }
 
@@ -38,9 +36,9 @@
 }
 
 .btn-menu {
-  button-color: var(--color-text) var(--color-bg) var(--color-bg);
-  button-background: var(--color-transparent) var(--color-brand)
-    var(--color-alt);
+  button-color: var(--color-text) var(--color-highlight) var(--color-highlight);
+  button-background: var(--color-transparent) var(--color-transparent)
+    var(--color-transparent);
   button-class: active disabled true;
 }
 

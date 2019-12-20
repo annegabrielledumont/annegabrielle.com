@@ -33,6 +33,10 @@ body {
   margin-top: var(--unit-xl);
 }
 
+.footer a {
+  color: var(--color-bg);
+}
+
 @media (--viewport-tablet) {
   .footer {
     height: var(--footer-height);

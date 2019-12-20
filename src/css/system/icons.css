@@ -268,12 +268,12 @@
   );
 }
 
-.btn-alt:hover .icon-menu,
-.btn-alt.active .icon-menu {
+.btn-menu:hover .icon-menu,
+.btn-menu.active .icon-menu {
   background-image: svg-load(
     './icons/24-menu.svg',
     fill=none,
-    stroke= 'white',
+    stroke=rgb(255, 0, 98),
     stroke-linecap=round,
     stroke-linejoin=round,
     stroke-width=1.25px
@@ -295,51 +295,6 @@
 .btn-border:hover .icon-pencil {
   background-image: svg-load(
     './icons/24-pencil.svg',
-    fill=none,
-    stroke= 'white',
-    stroke-linecap=round,
-    stroke-linejoin=round,
-    stroke-width=1.25px
-  );
-}
-
-.icon-key {
-  background-image: svg-load(
-    './icons/24-key.svg',
-    fill=none,
-    stroke= '#666',
-    stroke-linecap=round,
-    stroke-linejoin=round,
-    stroke-width=1.25px
-  );
-}
-
-.btn-alt:hover .icon-key {
-  background-image: svg-load(
-    './icons/24-key.svg',
-    fill=none,
-    stroke= 'white',
-    stroke-linecap=round,
-    stroke-linejoin=round,
-    stroke-width=1.25px
-  );
-}
-
-.icon-trash {
-  background-image: svg-load(
-    './icons/24-trash.svg',
-    fill=none,
-    stroke= '#666',
-    stroke-linecap=round,
-    stroke-linejoin=round,
-    stroke-width=1.25px
-  );
-}
-
-.btn-alt:hover .icon-trash,
-.btn-border:hover .icon-trash {
-  background-image: svg-load(
-    './icons/24-trash.svg',
     fill=none,
     stroke= 'white',
     stroke-linecap=round,
@@ -373,29 +328,6 @@
 .btn-border:hover .icon-globe {
   background-image: svg-load(
     './icons/globe-3.svg',
-    fill=none,
-    stroke= 'white',
-    stroke-linecap=round,
-    stroke-linejoin=round,
-    stroke-width=1.25px
-  );
-}
-
-.icon-list {
-  background-image: svg-load(
-    './icons/list-bullets.svg',
-    fill=none,
-    stroke= '#666',
-    stroke-linecap=round,
-    stroke-linejoin=round,
-    stroke-width=1.25px
-  );
-}
-
-.active .icon-list,
-.btn-border:hover .icon-list {
-  background-image: svg-load(
-    './icons/list-bullets.svg',
     fill=none,
     stroke= 'white',
     stroke-linecap=round,
