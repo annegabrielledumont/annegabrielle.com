@@ -76,6 +76,10 @@ module.exports = {
         new webpack.ExtendedAPIPlugin(),
         new HtmlWebpackPlugin({
           template: "src/index.html"
+        }),
+        new HtmlWebpackPlugin({
+          filename: "mon-parcours.html",
+          template: "src/mon-parcours.html"
         })
       ]
     : [
@@ -88,6 +92,10 @@ module.exports = {
         new webpack.ExtendedAPIPlugin(),
         new HtmlWebpackPlugin({
           template: "src/index.html"
+        }),
+        new HtmlWebpackPlugin({
+          filename: "mon-parcours.html",
+          template: "src/mon-parcours.html"
         }),
         new MiniCssExtractPlugin({
           filename: "dist/styles.css",
