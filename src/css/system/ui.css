@@ -77,7 +77,7 @@
 }
 
 .tooltip span::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 100%;
   right: var(--unit);

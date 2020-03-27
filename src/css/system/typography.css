@@ -40,7 +40,7 @@ h6 {
 
 h1,
 .h1 {
-  typescale: 2.5 1.5;
+  typescale: 3 1.5;
   color: color-mod(var(--color-brand) saturation(40%));
 }
 
@@ -51,7 +51,7 @@ h2,
 
 h3,
 .h3 {
-  typescale: -1 0.75;
+  typescale: -1.5 0.75;
 }
 
 h4,

@@ -57,11 +57,11 @@ a:hover .reveal {
 
   h3,
   .h3 {
-    typescale: 0 1;
+    typescale: -0.5 1;
   }
 
   blockquote {
     padding: var(--unit-m) var(--unit-xl);
-    typescale: 2.5 1.5;
+    typescale: 2 1.5;
   }
 }
