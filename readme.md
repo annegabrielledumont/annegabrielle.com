@@ -60,36 +60,52 @@ Dans le finder, ouvrir le dossier du projet dans VS Code en tirant le dossier `a
 
 Dans VS Code, ouvrir un terminal (menu > terminal > lancer un terminal).
 
-### Installer
+### 1. Mettre à jour et installer
 
 ```bash
+# récupère la dernière version sur github
+git pull --rebase origin master
+
 # installe les dépendances et mises à jour
 npm install
 ```
 
-### Développer
+### 2. Développer
 
 ```bash
-# récupère la dernière version sur github
+# lance le serveur de dév
 npm run dev
 ```
 
 `ctrl` + `c` pour arrêter
 
-### Générer le site
+### 3. Générer le site en local
 
 ```bash
-# Construit la version de prod dans le dossier /docs
+# construit la version de prod dans le dossier /docs
 npm run build
 ```
 
-### Pousser sur Github
+### 4. Envoyer les modifications sur github
 
 ```bash
-# commit des modifications en cours
+# ajoute les fichiers modifiés dans git (staging)
+# dans vscode, section Source Control: clique sur `+` à côté des noms de fichiers
+# ou avec la commande
+git add .
 
-# met à jour la version locale
-git pull --rebase origin master
+# ajoute les fichiers en staging dans un commit git
+# dans vscode, section Source Control: écrit `mon message de commit` dans le champs Message et valide
+# ou avec la commande
+git commit -m "mon message de commit"
+
+# vérifie que tous les fichiers ont étés ajoutés à git
+# dans vscode, section Source Control: il ne doit plus y avoir de fichiers visibles dans la liste
+# ou avec la commande
+git status
+
+# met à jour et installe
+# voir 1.
 
 # pousse sur GitHub
 git push origin master
