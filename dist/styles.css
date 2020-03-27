@@ -14,7 +14,7 @@ http://francoisromain.github.io/postcss-structure
   --color-neutral: #bcb9af;
   --color-alt: #f0f0e8;
   --color-highlight: rgb(255, 0, 98);
-  --color-brand: rgb(255, 95, 0);
+  --color-brand: #00a3b3;
   --color-error: #e82239;
   --color-warning: #ff891c;
   --color-info: #5798aa;
@@ -58,8 +58,8 @@ http://francoisromain.github.io/postcss-structure
   --unit-infinity: 9999px;
 
   /* Lists         ------------------------------- */
-  --list-postfix: ',';
-  --list-prefix: '―';
+  --list-postfix: ",";
+  --list-prefix: "―";
 
   /* Grid          ------------------------------- */
 
@@ -330,6 +330,7 @@ h1,
   font-size: calc(1.7469281074217107 * var(--base-font-size));
   line-height: calc(1.5 * 1.5rem);
   line-height: calc(1.5 * var(--unit));
+  color: hsl(185.3631284916201, 40%, 35.0980392157%);
 }
 
 h2,
@@ -342,10 +343,10 @@ h2,
 
 h3,
 .h3 {
-  font-size: calc(1.118033988749895 * 1rem);
-  font-size: calc(1.118033988749895 * var(--base-font-size));
-  line-height: calc(1 * 1.5rem);
-  line-height: calc(1 * var(--unit));
+  font-size: calc(0.8 * 1rem);
+  font-size: calc(0.8 * var(--base-font-size));
+  line-height: calc(0.75 * 1.5rem);
+  line-height: calc(0.75 * var(--unit));
 }
 
 h4,
@@ -405,10 +406,10 @@ h6 {
 
 blockquote {
   font-weight: 200;
-  font-size: calc(1.7469281074217107 * 1rem);
-  font-size: calc(1.7469281074217107 * var(--base-font-size));
-  line-height: calc(1.5 * 1.5rem);
-  line-height: calc(1.5 * var(--unit));
+  font-size: calc(1.3975424859373686 * 1rem);
+  font-size: calc(1.3975424859373686 * var(--base-font-size));
+  line-height: calc(1.25 * 1.5rem);
+  line-height: calc(1.25 * var(--unit));
   font-style: italic;
   color: hsl(336.94117647058823, 75%, 50%);
 }
@@ -448,10 +449,23 @@ a:hover,
     color: var(--color-highlight);
   }
 
-p a {
-  color: rgb(255, 0, 98);
-  color: var(--color-highlight);
+a.inverse {
+  text-decoration: none;
+  color: white;
+  color: var(--color-bg)
 }
+
+a.inverse:visited {
+    color: white;
+    color: var(--color-bg);
+  }
+
+a.inverse:hover,
+  a.inverse:active,
+  a.inverse:focus {
+    color: #3d3d35;
+    color: var(--color-inverse);
+  }
 
 b,
 strong,
@@ -527,7 +541,7 @@ label {
 }
 
 .mono {
-  font-family: 'Lucida Sans Typewriter', monaco, 'Lucida Console', monospace;
+  font-family: "Lucida Sans Typewriter", monaco, "Lucida Console", monospace;
   font-weight: bold;
 }
 
@@ -608,7 +622,7 @@ li > ul,
 }
 
 .list-prefix > li::before {
-    content: '―';
+    content: "―";
     content: var(--list-prefix);
     margin-right: calc(1.5rem / 4);
     margin-right: var(--unit-xs);
@@ -621,7 +635,7 @@ li > ul,
 }
 
 .list-postfix > li::after {
-      content: ',';
+      content: ",";
       content: var(--list-postfix);
     }
 
@@ -2474,6 +2488,11 @@ http://cssmojo.com/the-very-latest-clearfix-reloaded/
   background-color: var(--color-bg);
 }
 
+.bg-brand {
+  background-color: #00a3b3;
+  background-color: var(--color-brand);
+}
+
 .bg-highlight {
   background-color: rgb(255, 0, 98);
   background-color: var(--color-highlight);
@@ -3135,6 +3154,10 @@ a:hover .reveal {
   opacity: 1;
 }
 
+.banner {
+  background-color: hsl(336.94117647058823, 30%, 50%);
+}
+
 @media (min-width: 47.75em) {
   h1,
   .h1 {
@@ -3154,15 +3177,19 @@ a:hover .reveal {
 
   h3,
   .h3 {
-    font-size: calc(1.25 * 1rem);
-    font-size: calc(1.25 * var(--base-font-size));
-    line-height: calc(1.25 * 1.5rem);
-    line-height: calc(1.25 * var(--unit));
+    font-size: calc(1 * 1rem);
+    font-size: calc(1 * var(--base-font-size));
+    line-height: calc(1 * 1.5rem);
+    line-height: calc(1 * var(--unit));
   }
 
   blockquote {
-    padding: calc(1.5rem * 2);
-    padding: var(--unit-xl);
+    padding: calc(1.5rem * 3 / 4) calc(1.5rem * 2);
+    padding: var(--unit-m) var(--unit-xl);
+    font-size: calc(1.7469281074217107 * 1rem);
+    font-size: calc(1.7469281074217107 * var(--base-font-size));
+    line-height: calc(1.5 * 1.5rem);
+    line-height: calc(1.5 * var(--unit));
   }
 }
 
