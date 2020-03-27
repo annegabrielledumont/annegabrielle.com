@@ -81,10 +81,10 @@ npm run dev
 
 `ctrl` + `c` pour arrêter
 
-### 3. Générer le site en local
+### 3. Générer le site public en local
 
 ```bash
-# construit la version de prod dans le dossier /docs
+# construit la version de prod (fichiers index.hmtl, mon-parcours.html et dossier /dist)
 npm run build
 ```
 
