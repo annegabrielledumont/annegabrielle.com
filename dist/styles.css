@@ -12,7 +12,7 @@ http://francoisromain.github.io/postcss-structure
   --color-transparent: rgba(248, 247, 243, 0);
   --color-inverse: #3d3d35;
   --color-neutral: #bcb9af;
-  --color-alt: #f0f0e8;
+  --color-alt: #e8e5da;
   --color-highlight: rgb(255, 0, 98);
   --color-brand: #00a3b3;
   --color-error: #e82239;
@@ -289,6 +289,42 @@ html [type='button'],
 -------------------------------
 */
 
+a {
+  text-decoration: none;
+  color: #3d3d35;
+  color: var(--color-inverse)
+}
+
+a:visited {
+    color: #3d3d35;
+    color: var(--color-inverse);
+  }
+
+a:hover,
+  a:active,
+  a:focus {
+    color: rgb(255, 0, 98);
+    color: var(--color-highlight);
+  }
+
+a.inverse {
+  text-decoration: none;
+  color: white;
+  color: var(--color-bg)
+}
+
+a.inverse:visited {
+    color: white;
+    color: var(--color-bg);
+  }
+
+a.inverse:hover,
+  a.inverse:active,
+  a.inverse:focus {
+    color: #3d3d35;
+    color: var(--color-inverse);
+  }
+
 h2,
 h3,
 h4,
@@ -326,15 +362,16 @@ h6 {
 
 h1,
 .h1 {
-  font-size: calc(1.7469281074217107 * 1rem);
-  font-size: calc(1.7469281074217107 * var(--base-font-size));
+  font-weight: 100;
+  font-size: calc(1.953125 * 1rem);
+  font-size: calc(1.953125 * var(--base-font-size));
   line-height: calc(1.5 * 1.5rem);
   line-height: calc(1.5 * var(--unit));
-  color: hsl(185.3631284916201, 40%, 35.0980392157%);
 }
 
 h2,
 .h2 {
+  font-weight: 300;
   font-size: calc(1.25 * 1rem);
   font-size: calc(1.25 * var(--base-font-size));
   line-height: calc(1 * 1.5rem);
@@ -343,22 +380,25 @@ h2,
 
 h3,
 .h3 {
-  font-size: calc(0.8 * 1rem);
-  font-size: calc(0.8 * var(--base-font-size));
+  font-weight: 700;
+  font-size: calc(0.7155417527999327 * 1rem);
+  font-size: calc(0.7155417527999327 * var(--base-font-size));
   line-height: calc(0.75 * 1.5rem);
   line-height: calc(0.75 * var(--unit));
 }
 
 h4,
 .h4 {
-  font-size: calc(1 * 1rem);
-  font-size: calc(1 * var(--base-font-size));
-  line-height: calc(1 * 1.5rem);
-  line-height: calc(1 * var(--unit));
+  font-weight: 300;
+  font-size: calc(1.25 * 1rem);
+  font-size: calc(1.25 * var(--base-font-size));
+  line-height: calc(0.75 * 1.5rem);
+  line-height: calc(0.75 * var(--unit));
 }
 
 h5,
 .h5 {
+  font-weight: 700;
   font-size: calc(0.8 * 1rem);
   font-size: calc(0.8 * var(--base-font-size));
   line-height: calc(0.75 * 1.5rem);
@@ -368,36 +408,64 @@ h5,
 h6,
 .h6,
 small {
+  font-weight: 700;
   font-size: calc(0.8 * 1rem);
   font-size: calc(0.8 * var(--base-font-size));
   line-height: calc(0.75 * 1.5rem);
   line-height: calc(0.75 * var(--unit));
 }
 
-h1 {
-  font-weight: 200;
+h1,
+.h1 {
+  color: hsl(185.3631284916201, 40%, 35.0980392157%);
 }
 
+h1 a {
+  text-decoration: none;
+  color: hsl(185.3631284916201, 40%, 35.0980392157%)
+}
+
+h1 a:visited {
+    color: hsl(185.3631284916201, 40%, 35.0980392157%);
+  }
+
+h1 a:hover,
+  h1 a:active,
+  h1 a:focus {
+    color: #3d3d35;
+    color: var(--color-inverse);
+  }
+
 h2 {
-  font-weight: 300;
   padding-bottom: calc(1.5rem - calc(1.5rem / 24));
   padding-bottom: calc(var(--unit) - var(--border-width));
   border-bottom-width: calc(1.5rem / 24);
   border-bottom-width: var(--border-width);
   border-bottom-style: solid;
-  border-bottom-color: #f0f0e8;
+  border-bottom-color: #e8e5da;
   border-bottom-color: var(--border-color);
-  margin-bottom: 1.5rem;
-  margin-bottom: var(--unit);
   color: hsl(336.94117647058823, 30%, 50%);
 }
 
-h3,
-h4,
-h5,
-h6 {
-  font-weight: 700;
+h4 {
+  color: hsl(336.94117647058823, 30%, 50%);
 }
+
+h4 a {
+  text-decoration: none;
+  color: hsl(336.94117647058823, 30%, 50%)
+}
+
+h4 a:visited {
+    color: hsl(336.94117647058823, 30%, 50%);
+  }
+
+h4 a:hover,
+  h4 a:active,
+  h4 a:focus {
+    color: #3d3d35;
+    color: var(--color-inverse);
+  }
 
 h6 {
   color: #bcb9af;
@@ -405,7 +473,7 @@ h6 {
 }
 
 blockquote {
-  font-weight: 200;
+  font-weight: 300;
   font-size: calc(1.3975424859373686 * 1rem);
   font-size: calc(1.3975424859373686 * var(--base-font-size));
   line-height: calc(1.25 * 1.5rem);
@@ -425,47 +493,11 @@ hr {
   border-top-width: calc(1.5rem / 24);
   border-top-width: var(--border-width);
   border-top-style: dotted;
-  border-top-color: #f0f0e8;
+  border-top-color: #e8e5da;
   border-top-color: var(--border-color);
   margin-bottom: calc(1.5rem - calc(1.5rem / 24));
   margin-bottom: calc(var(--unit) - var(--border-width));
 }
-
-a {
-  text-decoration: none;
-  color: #3d3d35;
-  color: var(--color-inverse)
-}
-
-a:visited {
-    color: #3d3d35;
-    color: var(--color-inverse);
-  }
-
-a:hover,
-  a:active,
-  a:focus {
-    color: rgb(255, 0, 98);
-    color: var(--color-highlight);
-  }
-
-a.inverse {
-  text-decoration: none;
-  color: white;
-  color: var(--color-bg)
-}
-
-a.inverse:visited {
-    color: white;
-    color: var(--color-bg);
-  }
-
-a.inverse:hover,
-  a.inverse:active,
-  a.inverse:focus {
-    color: #3d3d35;
-    color: var(--color-inverse);
-  }
 
 b,
 strong,
@@ -667,7 +699,7 @@ th {
 }
 
 tr {
-  border-bottom-color: #f0f0e8;
+  border-bottom-color: #e8e5da;
   border-bottom-color: var(--border-color);
   border-bottom-width: calc(1.5rem / 24);
   border-bottom-width: var(--unit-line);
@@ -675,12 +707,12 @@ tr {
 }
 
 .table-striped tr:nth-child(even) {
-  background-color: #f0f0e8;
+  background-color: #e8e5da;
   background-color: var(--color-alt);
 }
 
 .table-sans tr {
-  border-bottom: calc(1.5rem / 24) dotted #f0f0e8;
+  border-bottom: calc(1.5rem / 24) dotted #e8e5da;
   border-bottom: var(--unit-line) dotted var(--border-color);
 }
 
@@ -732,7 +764,7 @@ th:not(:last-child) {
 }
 
 .tr-link:hover {
-  background-color: #f0f0e8;
+  background-color: #e8e5da;
   background-color: var(--color-alt);
 }
 
@@ -948,7 +980,7 @@ textarea,
 .input {
   width: 100%;
   border: 0 none;
-  background-color: #f0f0e8;
+  background-color: #e8e5da;
   background-color: var(--color-alt);
   height: auto;
   color: inherit;
@@ -1006,7 +1038,7 @@ input:disabled,
 textarea:disabled,
 select:disabled,
 .input-disabled {
-  background-color: rgba(240, 240, 232, 0.5);
+  background-color: rgba(232, 229, 218, 0.5);
 }
 
 input.bg-bg:disabled,
@@ -2449,7 +2481,7 @@ http://cssmojo.com/the-very-latest-clearfix-reloaded/
 }
 
 .color-alt {
-  color: #f0f0e8;
+  color: #e8e5da;
   color: var(--color-alt);
 }
 
@@ -2499,7 +2531,7 @@ http://cssmojo.com/the-very-latest-clearfix-reloaded/
 }
 
 .bg-alt {
-  background-color: #f0f0e8;
+  background-color: #e8e5da;
   background-color: var(--color-alt);
 }
 
@@ -2538,7 +2570,7 @@ http://cssmojo.com/the-very-latest-clearfix-reloaded/
 }
 
 .bg-alt-alpha {
-  background-color: rgba(240, 240, 232, 0.5);
+  background-color: rgba(232, 229, 218, 0.5);
 }
 
 .bg-inverse-alpha {
@@ -2581,33 +2613,33 @@ http://cssmojo.com/the-very-latest-clearfix-reloaded/
 }
 
 .border-b {
-  border-bottom: calc(1.5rem / 24) solid #f0f0e8;
+  border-bottom: calc(1.5rem / 24) solid #e8e5da;
   border-bottom: var(--unit-line) solid var(--color-alt);
   margin-bottom: calc(1.5rem - calc(1.5rem / 24));
   margin-bottom: calc(var(--unit) - var(--unit-line));
 }
 
 .border-t {
-  border-top: calc(1.5rem / 24) solid #f0f0e8;
+  border-top: calc(1.5rem / 24) solid #e8e5da;
   border-top: var(--unit-line) solid var(--color-alt);
 }
 
 .border-b-s {
-  border-bottom: calc(1.5rem / 24) solid #f0f0e8;
+  border-bottom: calc(1.5rem / 24) solid #e8e5da;
   border-bottom: var(--unit-line) solid var(--color-alt);
   margin-bottom: calc(-1 * calc(1.5rem / 24));
   margin-bottom: calc(-1 * var(--unit-line));
 }
 
 .border-t-r {
-  border-top: calc(1.5rem / 24) solid #f0f0e8;
+  border-top: calc(1.5rem / 24) solid #e8e5da;
   border-top: var(--unit-line) solid var(--color-alt);
-  border-right: calc(1.5rem / 24) solid #f0f0e8;
+  border-right: calc(1.5rem / 24) solid #e8e5da;
   border-right: var(--unit-line) solid var(--color-alt);
 }
 
 .border {
-  box-shadow: inset 0 0 0 calc(1.5rem / 24) #f0f0e8;
+  box-shadow: inset 0 0 0 calc(1.5rem / 24) #e8e5da;
   box-shadow: inset 0 0 0 var(--unit-line) var(--color-alt);
 }
 
@@ -2629,7 +2661,7 @@ http://cssmojo.com/the-very-latest-clearfix-reloaded/
 
 .tooltip span {
   position: absolute;
-  color: #f0f0e8;
+  color: #e8e5da;
   color: var(--color-alt);
   background: #bcb9af;
   background: var(--color-neutral);
@@ -2645,7 +2677,7 @@ http://cssmojo.com/the-very-latest-clearfix-reloaded/
 }
 
 .tooltip span::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 100%;
   right: 1.5rem;
@@ -2707,7 +2739,7 @@ pre code {
 }
 
 code {
-  background-color: #f0f0e8;
+  background-color: #e8e5da;
   background-color: var(--color-alt);
   padding: calc(1.5rem / 4) calc(1.5rem / 2);
   padding: var(--unit-xs) var(--unit-s);
@@ -3119,25 +3151,18 @@ body {
   background-color: #3d3d35;
   background-color: var(--color-inverse);
   background-blend-mode: hard-light;
-  opacity: 0.2;
+  opacity: 0.3;
 
   -webkit-transition: opacity 0.5s linear;
 
   transition: opacity 0.5s linear;
-  /* background: linear-gradient(
-      to bottom left,
-      rgb(209, 179, 115),
-      var(--color-inverse)
-    ),
-    linear-gradient(to top left, rgb(141, 196, 196), transparent),
-    linear-gradient(to top right, rgb(145, 75, 98), transparent); */
 }
 
 a:hover .overlay-color {
   opacity: 0.75;
 }
 
-h2 {
+h2.color-bg {
   border-bottom-color: white;
   border-bottom-color: var(--color-bg);
 }
@@ -3169,16 +3194,16 @@ a:hover .reveal {
 
   h2,
   .h2 {
-    font-size: calc(1.953125 * 1rem);
-    font-size: calc(1.953125 * var(--base-font-size));
+    font-size: calc(2.1836601342771385 * 1rem);
+    font-size: calc(2.1836601342771385 * var(--base-font-size));
     line-height: calc(1.5 * 1.5rem);
     line-height: calc(1.5 * var(--unit));
   }
 
   h3,
   .h3 {
-    font-size: calc(1 * 1rem);
-    font-size: calc(1 * var(--base-font-size));
+    font-size: calc(0.8944271909999159 * 1rem);
+    font-size: calc(0.8944271909999159 * var(--base-font-size));
     line-height: calc(1 * 1.5rem);
     line-height: calc(1 * var(--unit));
   }
@@ -3186,8 +3211,8 @@ a:hover .reveal {
   blockquote {
     padding: calc(1.5rem * 3 / 4) calc(1.5rem * 2);
     padding: var(--unit-m) var(--unit-xl);
-    font-size: calc(1.7469281074217107 * 1rem);
-    font-size: calc(1.7469281074217107 * var(--base-font-size));
+    font-size: calc(1.5625 * 1rem);
+    font-size: calc(1.5625 * var(--base-font-size));
     line-height: calc(1.5 * 1.5rem);
     line-height: calc(1.5 * var(--unit));
   }
