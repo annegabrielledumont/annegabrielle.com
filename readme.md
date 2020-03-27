@@ -62,6 +62,8 @@ Dans VS Code, ouvrir un terminal (menu > terminal > lancer un terminal).
 
 ### 1. Mettre à jour et installer
 
+> Pré-requis: si des fichiers ont été modifiés localement, ils doivent être enregistrés dans git (cf 4.)
+
 ```bash
 # récupère la dernière version sur github
 git pull --rebase origin master
@@ -86,7 +88,7 @@ npm run dev
 npm run build
 ```
 
-### 4. Envoyer les modifications sur github
+### 4. Enregistrer les modifications dans git
 
 ```bash
 # ajoute les fichiers modifiés dans git (staging)
@@ -103,10 +105,13 @@ git commit -m "mon message de commit"
 # dans vscode, section Source Control: il ne doit plus y avoir de fichiers visibles dans la liste
 # ou avec la commande
 git status
+```
 
-# met à jour et installe
-# voir 1.
+### 5. Envoyer les modifications sur github
 
+> Pré-requis: la version locale doit être à jour (cf 1.)
+
+```bash
 # pousse sur GitHub
 git push origin master
 ```
