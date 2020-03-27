@@ -10,23 +10,16 @@
 .overlay-color {
   background-color: var(--color-inverse);
   background-blend-mode: hard-light;
-  opacity: 0.2;
+  opacity: 0.3;
 
   transition: opacity 0.5s linear;
-  /* background: linear-gradient(
-      to bottom left,
-      rgb(209, 179, 115),
-      var(--color-inverse)
-    ),
-    linear-gradient(to top left, rgb(141, 196, 196), transparent),
-    linear-gradient(to top right, rgb(145, 75, 98), transparent); */
 }
 
 a:hover .overlay-color {
   opacity: 0.75;
 }
 
-h2 {
+h2.color-bg {
   border-bottom-color: var(--color-bg);
 }
 
@@ -52,7 +45,7 @@ a:hover .reveal {
 
   h2,
   .h2 {
-    typescale: 3 1.5;
+    typescale: 3.5 1.5;
   }
 
   h3,
