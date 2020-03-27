@@ -7,6 +7,10 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const npmPackage = require("./package.json");
 
 module.exports = {
+  devServer: {
+    // host: "192.168.1.10",
+    disableHostCheck: true
+  },
   mode: dev ? "development" : "production",
   context: __dirname,
   entry: "./src/js/scripts.js",

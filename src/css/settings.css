@@ -12,7 +12,7 @@ http://francoisromain.github.io/postcss-structure
   --color-neutral: #bcb9af;
   --color-alt: #f0f0e8;
   --color-highlight: rgb(255, 0, 98);
-  --color-brand: rgb(255, 95, 0);
+  --color-brand: #00a3b3;
   --color-error: #e82239;
   --color-warning: #ff891c;
   --color-info: #5798aa;
@@ -54,8 +54,8 @@ http://francoisromain.github.io/postcss-structure
   --unit-infinity: 9999px;
 
   /* Lists         ------------------------------- */
-  --list-postfix: ',';
-  --list-prefix: '―';
+  --list-postfix: ",";
+  --list-prefix: "―";
 
   /* Grid          ------------------------------- */
 

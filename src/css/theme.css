@@ -40,6 +40,10 @@ a:hover .reveal {
   opacity: 1;
 }
 
+.banner {
+  background-color: color-mod(var(--color-highlight) saturation(30%));
+}
+
 @media (--viewport-tablet) {
   h1,
   .h1 {
@@ -53,10 +57,11 @@ a:hover .reveal {
 
   h3,
   .h3 {
-    typescale: 1 1.25;
+    typescale: 0 1;
   }
 
   blockquote {
-    padding: var(--unit-xl);
+    padding: var(--unit-m) var(--unit-xl);
+    typescale: 2.5 1.5;
   }
 }

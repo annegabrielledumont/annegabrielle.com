@@ -41,6 +41,7 @@ h6 {
 h1,
 .h1 {
   typescale: 2.5 1.5;
+  color: color-mod(var(--color-brand) saturation(40%));
 }
 
 h2,
@@ -50,7 +51,7 @@ h2,
 
 h3,
 .h3 {
-  typescale: 0.5 1;
+  typescale: -1 0.75;
 }
 
 h4,
@@ -96,7 +97,7 @@ h6 {
 
 blockquote {
   font-weight: 200;
-  typescale: 2.5 1.5;
+  typescale: 1.5 1.25;
   font-style: italic;
   color: color-mod(var(--color-highlight) saturation(75%));
 }
@@ -130,8 +131,19 @@ a {
   }
 }
 
-p a {
-  color: var(--color-highlight);
+a.inverse {
+  text-decoration: none;
+  color: var(--color-bg);
+
+  &:visited {
+    color: var(--color-bg);
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: var(--color-inverse);
+  }
 }
 
 b,
@@ -206,7 +218,7 @@ label {
 }
 
 .mono {
-  font-family: 'Lucida Sans Typewriter', monaco, 'Lucida Console', monospace;
+  font-family: "Lucida Sans Typewriter", monaco, "Lucida Console", monospace;
   font-weight: bold;
 }
 
