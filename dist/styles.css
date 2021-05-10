@@ -2480,6 +2480,11 @@ http://cssmojo.com/the-very-latest-clearfix-reloaded/
   color: var(--color-highlight);
 }
 
+.color-brand {
+  color: #00a3b3;
+  color: var(--color-brand);
+}
+
 .color-alt {
   color: #e8e5da;
   color: var(--color-alt);
@@ -3181,6 +3186,11 @@ a:hover .reveal {
 
 .banner {
   background-color: hsl(336.94117647058823, 30%, 50%);
+}
+
+.logo {
+  height: calc(1.5rem * 3 / 2);
+  height: var(--unit-l);
 }
 
 @media (min-width: 47.75em) {
