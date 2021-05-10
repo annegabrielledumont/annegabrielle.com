@@ -37,6 +37,10 @@ a:hover .reveal {
   background-color: color-mod(var(--color-highlight) saturation(30%));
 }
 
+.logo {
+  height: var(--unit-l);
+}
+
 @media (--viewport-tablet) {
   h1,
   .h1 {
